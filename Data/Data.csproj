@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\AccountContext.cs" />
     <Compile Include="Context\DatabaseContext.cs" />
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Topic.cs" />
@@ -81,14 +82,16 @@
     <Compile Include="Entities\Class.cs" />
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\Parent.cs" />
-    <Compile Include="Migrations\202005110931321_Initial.cs" />
-    <Compile Include="Migrations\202005110931321_Initial.designer.cs">
-      <DependentUpon>202005110931321_Initial.cs</DependentUpon>
+    <Compile Include="Entities\UserAccount.cs" />
+    <Compile Include="Migrations\202005111242076_Auth.cs" />
+    <Compile Include="Migrations\202005111242076_Auth.designer.cs">
+      <DependentUpon>202005111242076_Auth.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repozitories\IRepository.cs" />
-    <Compile Include="Repozitories\Repository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\AccountRepository .cs" />
+    <Compile Include="Repositories\Repository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -96,11 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202005110931321_Initial.resx">
-      <DependentUpon>202005110931321_Initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -113,6 +111,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202005111242076_Auth.resx">
+      <DependentUpon>202005111242076_Auth.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

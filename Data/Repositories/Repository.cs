@@ -7,7 +7,7 @@ using Data.Context;
 using System.Data.Entity;
 
 
-namespace Data.Repozitories 
+namespace Data.Repositories 
 {
     public class Repository<T> : IRepository<T> where T : class
     {

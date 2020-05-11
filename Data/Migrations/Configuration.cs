@@ -1,26 +1,23 @@
-﻿using System;
-using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using System.Linq;
-using Data.Entities;
-
-namespace Data.Migrations
+﻿namespace Data.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<Data.Context.Database>
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
+
+    internal sealed class Configuration : DbMigrationsConfiguration<Data.Context.AccountContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Data.Context.Database context)
+        protected override void Seed(Data.Context.AccountContext context)
         {
-            context.Admins.AddOrUpdate(new Admin {
-                Id = Guid.Parse("0bf79443-6603-4c81-abf7-e51ba5498232"),
-                Email = "admin@classbook.org",
-                Name = "admin",
-                PWS = "admin"
-            });
+            //  This method will be called after migrating to the latest version.
+
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
+            //  to avoid creating duplicate seed data.
         }
     }
 }

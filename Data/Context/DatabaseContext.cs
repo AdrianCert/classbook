@@ -22,5 +22,6 @@ namespace Data.Context
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Situation> Situations { get; set; }
         public virtual DbSet<Topic> Topics { get; set; }
+
     }
 }

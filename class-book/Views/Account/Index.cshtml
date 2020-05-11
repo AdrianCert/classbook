@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="jumbotron container align-self-center">
+            <h1>Login Page</h1>
+            <p class="lead">Log in using google. Just press the button above</p>
+            <a class="btn btn-lg btn-primary" href="@Url.Action("SignIn", new { type = "Google" })" role="button">Sing In with google</a>
+            </div>
+    </div>
+</div>   

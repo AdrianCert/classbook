@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.Repozitories
+namespace Data.Repositories
 {
     public interface IRepository<T> where T : class
     {
