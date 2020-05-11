@@ -2,4 +2,9 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/classbook/.vs/classbook
+.vs
+bin
+Debug
+packages
+/class-book/Content
+/class-book/Scripts
