@@ -22,12 +22,22 @@
         <div class="bg-light border-right" id="sidebar">
             <div class="sidebar-heading">@ViewBag.Title</div>
             <div class="list-group list-group-flush">
-                @Html.ActionLink("Action1", "Index", "Home", new { area = "" }, new { @class = "list-group-item list-group-item-action bg-light" })
-                @Html.ActionLink("Action2", "Index", "Home", new { area = "" }, new { @class = "list-group-item list-group-item-action bg-light" })
-                @Html.ActionLink("Action3", "Index", "Home", new { area = "" }, new { @class = "list-group-item list-group-item-action bg-light" })
-                @Html.ActionLink("Action4", "Index", "Home", new { area = "" }, new { @class = "list-group-item list-group-item-action bg-light" })
-                @Html.ActionLink("Action5", "Index", "Home", new { area = "" }, new { @class = "list-group-item list-group-item-action bg-light" })
-                @RenderSection("left-link", required: false)
+                @if (User.Identity.IsAuthenticated)
+                {
+                    @Html.ActionLink("Students", "Index", "Students", new { area = "" }, new { @class = "list-group-item list-group-item-action bg-light" })
+                    @Html.ActionLink("Parents", "Index", "Parents", new { area = "" }, new { @class = "list-group-item list-group-item-action bg-light" })
+                    @Html.ActionLink("Teachers", "Index", "Teachers", new { area = "" }, new { @class = "list-group-item list-group-item-action bg-light" })
+                }
+                else
+                {
+
+                    @Html.ActionLink("Action1", "Index", "Home", new { area = "" }, new { @class = "list-group-item list-group-item-action bg-light" })
+                    @Html.ActionLink("Action2", "Index", "Home", new { area = "" }, new { @class = "list-group-item list-group-item-action bg-light" })
+                    @Html.ActionLink("Action3", "Index", "Home", new { area = "" }, new { @class = "list-group-item list-group-item-action bg-light" })
+                    @Html.ActionLink("Action4", "Index", "Home", new { area = "" }, new { @class = "list-group-item list-group-item-action bg-light" })
+                    @Html.ActionLink("Action5", "Index", "Home", new { area = "" }, new { @class = "list-group-item list-group-item-action bg-light" })
+                }
+                    @RenderSection("left-link", required: false)
             </div>
         </div>
 
