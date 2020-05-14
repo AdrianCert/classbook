@@ -68,7 +68,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\AccountContext.cs" />
     <Compile Include="Context\DatabaseContext.cs" />
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Topic.cs" />
@@ -83,9 +82,9 @@
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\Parent.cs" />
     <Compile Include="Entities\UserAccount.cs" />
-    <Compile Include="Migrations\202005111242076_Auth.cs" />
-    <Compile Include="Migrations\202005111242076_Auth.designer.cs">
-      <DependentUpon>202005111242076_Auth.cs</DependentUpon>
+    <Compile Include="Migrations\202005140829371_Init.cs" />
+    <Compile Include="Migrations\202005140829371_Init.designer.cs">
+      <DependentUpon>202005140829371_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,8 +112,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202005111242076_Auth.resx">
-      <DependentUpon>202005111242076_Auth.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202005140829371_Init.resx">
+      <DependentUpon>202005140829371_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

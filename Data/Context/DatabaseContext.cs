@@ -13,6 +13,7 @@ namespace Data.Context
         {
         }
         public virtual DbSet<Admin> Admins { get; set; }
+        public virtual DbSet<UserAccount> Accounts { get; set; }
         public virtual DbSet<Class> Classes { get; set; }
         public virtual DbSet<Discipline> Disciplines  { get; set; }
         public virtual DbSet<Note> Notes { get; set; }
@@ -22,6 +23,6 @@ namespace Data.Context
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Situation> Situations { get; set; }
         public virtual DbSet<Topic> Topics { get; set; }
-
+        public virtual DbSet<Teacher> Teachers { get; set; }
     }
 }

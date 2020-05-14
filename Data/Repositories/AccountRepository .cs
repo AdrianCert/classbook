@@ -12,11 +12,11 @@ namespace Data.Repositories
 {
     public class AccountRepository
     {
-        private Context.AccountContext _context = null;
+        private Context.Database _context = null;
         private DbSet<UserAccount> table = null;
         public AccountRepository()
         {
-            this._context = new Context.AccountContext();
+            this._context = new Context.Database();
             table = _context.Set<UserAccount>();
         }
         public IEnumerable<UserAccount> GetAll()
